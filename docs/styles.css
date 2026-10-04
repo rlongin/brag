@@ -1,7 +1,7 @@
 /* brag — launch site */
 
 :root {
-  --hue: 35;
+  --hue: 275;
 
   --hero-bg: oklch(64% 0.22 var(--hue));
   --hero-ink: oklch(16% 0.06 var(--hue));
