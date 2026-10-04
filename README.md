@@ -1,164 +1,48 @@
-# /brag
+# EFV Diorlet
 
-**You built it. Now brag.**
+**Turn what you built into something worth showing.**
 
-> **Want a video without running `/brag` yourself?** Paste your site's link at [letsbrag.app](https://letsbrag.app).
+EFV Diorlet is the EF Ventures branded edition of the open-source `/brag` launch-video workflow. It turns a project or website into a short, shareable launch video with motion, music, a poster frame, and ready-to-use share copy.
 
-[![the /brag launch site — you built it, now brag](docs/assets/hero.png)](https://latent-spaces.github.io/brag/)
+## What stays intact
 
-`/brag` is an agent skill that turns the project you created into a short, shareable launch video — music, motion, and share copy included. One command, powered by [Hyperframes](https://hyperframes.heygen.com/).
+This edition intentionally preserves the upstream generation workflow and creative rules rather than rewriting a working system. The EFV layer changes the product identity, support experience, and Nexus/Ventura integration.
 
-The looping video on the [launch site](https://latent-spaces.github.io/brag/) was made by `/brag` on this very repo. 
+- Short 15–25 second launch videos
+- Landscape, vertical, and square formats
+- Multiple creative tones
+- Music and sound effects
+- Optional voice workflow where supported
+- Poster-frame generation
+- Share-copy generation
+- Full Hyperframes workflow and the lean workflow included by upstream
 
-## Rather not run it yourself? Use letsbrag.app
+## EF Ventures integration
 
-[letsbrag.app](https://letsbrag.app) runs `/brag` for you. Paste your site's link and get a 20-second launch video with music, motion, and share copy. No setup, no subscription.
+Inside Nexus, EFV Diorlet is installed through Ventura OS. The Nexus workspace includes a **Help** experience with a practical user guide and a **Message a Core Steward** action using Nexus Direct Messages.
 
-The skill stays free and open source. Install it below and run it yourself anytime.
+## How to use
 
-## New: `/brag-slim`
+1. Choose the project or website you want to showcase.
+2. Pick the creative direction and output format.
+3. Let Diorlet inspect the real product and build the story around its strongest moments.
+4. Review the generated video, poster, audio, motion, and copy.
+5. Export the video and accompanying share assets.
 
-**The same /brag, rebuilt lean for Opus 5.5.**
+The underlying agent workflow can also be used directly from a compatible agent environment. Node.js 22+ and FFmpeg are required for the full local workflow; Hyperframes is used by the classic full workflow.
 
-A smooth launch video, designed for your specific project, with its own soundtrack and share copy.
+## Support
 
-No Hyperframes, no bundled assets, same creative rules.
+For EF Ventures members, open **EFV Diorlet → Help → Message a Core Steward** inside Nexus. Support messages should never contain passwords, API keys, tokens, or other secrets.
 
-Just tell Opus 5.5: *let's /brag about this.*
+## Open-source attribution
 
-On Opus 5.5, `/brag` switches to `/brag-slim` automatically. Run `/brag --full` to keep the classic Hyperframes workflow.
+EFV Diorlet is based on the open-source `/brag` project originally created by Shunit Haviv Hakimi and contributors. The original software is licensed under the MIT License.
 
-**Install just `/brag-slim`:**
+This fork preserves the original `LICENSE` file and copyright notice as required by the MIT License. EFV Diorlet branding and EF Ventures-specific integration do not imply that the original authors endorse or are affiliated with EF Ventures.
 
-```bash
-npx skills add https://github.com/latent-spaces/brag --skill brag-slim
-```
+Upstream project: https://github.com/latent-spaces/brag
 
-Already have the Claude Code `/brag` plugin? `/brag-slim` is included from version 0.4.0. Run `claude plugin update brag` to get it.
+## License
 
-## Install /brag
-
-**Codex:**
-
-```bash
-codex plugin marketplace add latent-spaces/brag
-codex plugin add brag@brag
-```
-
-To update it later:
-
-```bash
-codex plugin marketplace upgrade brag
-codex plugin add brag@brag
-```
-
-**Claude Code:**
-
-```bash
-/plugin marketplace add latent-spaces/brag
-/plugin install brag@brag
-```
-
-Then run `/brag` inside any project. The plugin includes `/brag-slim` too.
-
-**Any other agent** — one command via the [`skills`](https://github.com/vercel-labs/skills) CLI (Cursor, Codex, Copilot, Gemini CLI, opencode, and more):
-
-```bash
-npx skills add https://github.com/latent-spaces/brag --skill brag
-```
-
-Add `-g` to install globally (available in every project); drop it to scope to the current one. ([browse on skills.sh](https://www.skills.sh/latent-spaces/brag/brag))
-
-<details>
-<summary>No installer? Copy the skill directly.</summary>
-
-```bash
-rsync -a --exclude '.DS_Store' skills/brag/ ~/.claude/skills/brag/
-rsync -a --exclude '.DS_Store' skills/brag-slim/ ~/.claude/skills/brag-slim/  # optional: the /brag-slim command
-```
-
-Restart Claude Code after copying.
-</details>
-
-### Also works with
-
-This repo exposes the skill at every agent's standard discovery path via symlinks. No extra config needed.
-
-| Agent | How it discovers |
-|---|---|
-| **Google Antigravity** | Auto-detects from `.agents/skills/brag/` at project root or `~/.gemini/config/skills/brag/` globally |
-| **opencode** | Auto-detects from `.opencode/skills/brag/` at project root |
-| **Codex CLI** | Reads `.agents/skills/brag/`, walking up to repo root |
-| **Claude Code** | Also reads `.claude/skills/brag/` (in addition to the `.claude-plugin/` marketplace install above) |
-| **Other agents** | Point custom instructions at `skills/brag/SKILL.md` — see [`docs/other-agents.md`](docs/other-agents.md) |
-
-> **Windows users:** Git requires `git config core.symlinks true` (or `git clone -c core.symlinks=true`) and Windows Developer Mode or Administrator privileges to create symlinks. If symlinks don't work on your system, copy `skills/brag/` to the agent's skill directory manually instead.
-
-## Use it
-
-From any project directory, ask your agent:
-
-```text
-let's /brag
-```
-
-Or steer the tone:
-
-```text
-/brag --tone "fake Series A launch from 2016"
-```
-
-Voiceover is off by default. Enable it explicitly with:
-
-```text
-/brag --voice
-```
-
-Narration uses Kokoro through Hyperframes when enabled.
-
-You get a `brag-output/` folder with the plan, a composition brief, share copy, and the rendered `brag.mp4`.
-
-## How it works
-
-`/brag` owns the story — the product angle, tone, and which moments to show. It hands a focused brief to [Hyperframes](https://hyperframes.heygen.com/), which builds, times, and renders the video.
-
-## Requirements
-
-- An agent that supports Agent Skills — Claude Code, opencode, Codex CLI, or any agent with custom instructions (see "Also works with" above)
-- Node.js 22+
-- FFmpeg on `PATH`
-- Hyperframes CLI — `npx hyperframes` (check it with `npx hyperframes doctor`)
-
-## What's in this repo
-
-- `skills/brag/` — the skill, references, and bundled music + SFX
-- `skills/brag-slim/` — `/brag-slim`, the single-file skill for Claude Opus 5.5
-- `examples/` — fake product sites used as a benchmark suite
-- `docs/` — the launch site (GitHub Pages)
-- `plugin.json` — portable Agent Plugins manifest
-- `.codex-plugin/` — Codex compatibility manifest
-- `.claude-plugin/` — Claude Code manifest + shared marketplace catalog (also recognized by Codex)
-- `.claude/skills/brag/` — symlink → `skills/brag/` (Claude Code discovery)
-- `.agents/skills/brag/` — symlink → `skills/brag/` (Codex CLI + opencode discovery)
-- `.opencode/skills/brag/` — symlink → `skills/brag/` (opencode discovery)
-
-## Credits
-
-- Music — [ende.app](https://ende.app/en) "Happy Beats / Business Moves"
-- Sound effects — [Kenney](https://kenney.nl/)
-- Video generation — [Hyperframes](https://hyperframes.heygen.com/)
-- Fake demo sites — built with [Impeccable](https://impeccable.style/)
-
-## Contributing
-
-Contributions, ideas, and new demo brags are welcome — open an issue or a PR.
-
-## Star History
-
-<a href="https://www.star-history.com/?type=date&repos=latent-spaces%2Fbrag">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=latent-spaces/brag&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=latent-spaces/brag&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=latent-spaces/brag&type=date&legend=top-left" />
- </picture>
-</a>
+MIT. See `LICENSE`.
