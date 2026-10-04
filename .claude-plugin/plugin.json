@@ -1,13 +1,19 @@
 {
-  "name": "brag",
-  "description": "Turn the current project into a short, polished, shareable launch video using HyperFrames.",
+  "name": "efv-diorlet",
+  "description": "EFV Diorlet turns the current project into a short, polished, shareable launch video using HyperFrames.",
   "version": "0.4.0",
   "author": {
     "name": "Shunit Haviv Hakimi",
     "email": "shunithaviv@gmail.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/latent-spaces/brag",
-  "repository": "https://github.com/latent-spaces/brag",
-  "keywords": ["video", "launch", "hyperframes", "skill"]
+  "homepage": "https://github.com/rlongin/brag",
+  "repository": "https://github.com/rlongin/brag",
+  "keywords": [
+    "video",
+    "launch",
+    "hyperframes",
+    "efv-diorlet",
+    "skill"
+  ]
 }
