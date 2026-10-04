@@ -1,11 +1,11 @@
 ---
-name: brag-slim
+name: efv-diorlet-slim
 description: Turn a project directory or a website URL into a short, shareable launch video with music, motion, and share copy. One file, no bundled assets — built entirely by the model with the tools already on the machine. Use when someone says "/brag-slim", "let's /brag about this", "brag about a website", "make a launch video", or wants to show off what they built. If the /brag skill is also installed, let /brag handle those phrases; it hands off here on Opus 5.5.
 ---
 
-# /brag-slim
+# EFV Diorlet Slim
 
-You built it. Now brag. You make the whole video yourself — story, visuals, audio, render — with whatever tools are on the machine.
+You built it. Now show it with EFV Diorlet. You make the whole video yourself — story, visuals, audio, render — with whatever tools are on the machine.
 
 Whatever the tone, it should feel like a modern, slick, polished launch video: nothing on screen or in the soundtrack that doesn't earn its place.
 
