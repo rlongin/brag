@@ -1,29 +1,39 @@
 {
-  "name": "brag",
+  "name": "efv-diorlet",
   "version": "0.4.0",
-  "description": "Turn the current project into a short, polished, shareable launch video using Hyperframes.",
+  "description": "EFV Diorlet turns the current project into a short, polished, shareable launch video using Hyperframes.",
   "author": {
     "name": "Shunit Haviv Hakimi",
     "email": "shunithaviv@gmail.com",
     "url": "https://github.com/shunithaviv"
   },
-  "homepage": "https://latent-spaces.github.io/brag/",
-  "repository": "https://github.com/latent-spaces/brag",
+  "homepage": "https://github.com/rlongin/brag",
+  "repository": "https://github.com/rlongin/brag",
   "license": "MIT",
-  "keywords": ["video", "launch", "hyperframes", "skill"],
+  "keywords": [
+    "video",
+    "launch",
+    "hyperframes",
+    "efv-diorlet",
+    "skill"
+  ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "brag",
+    "displayName": "EFV Diorlet",
     "shortDescription": "Turn your project into a polished launch video.",
-    "longDescription": "Create a short, shareable launch video from the current project, complete with a tailored story, motion, music, sound effects, poster frame, and share copy.",
-    "developerName": "Latent Spaces",
+    "longDescription": "EFV Diorlet creates a short, shareable launch video from the current project, complete with a tailored story, motion, music, sound effects, poster frame, and share copy.",
+    "developerName": "EF Ventures",
     "category": "Productivity",
-    "capabilities": ["Read", "Write", "Execute"],
-    "websiteURL": "https://latent-spaces.github.io/brag/",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Execute"
+    ],
+    "websiteURL": "https://github.com/rlongin/brag",
     "defaultPrompt": [
-      "Turn this project into a launch video.",
-      "Let's brag about what I built.",
-      "Make a polished launch video for this project."
+      "Create an EFV Diorlet launch video for this project.",
+      "Turn this project into a polished launch video.",
+      "Make a short launch video for what I built."
     ]
   }
 }
