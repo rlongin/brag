@@ -1,15 +1,21 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "brag",
+  "name": "efv-diorlet",
   "version": "0.4.0",
-  "description": "Turn the current project into a short, polished, shareable launch video using Hyperframes.",
+  "description": "EFV Diorlet turns a project into a short, polished, shareable launch video using the proven /brag workflow.",
   "author": {
     "name": "Shunit Haviv Hakimi",
     "email": "shunithaviv@gmail.com",
     "url": "https://github.com/shunithaviv"
   },
-  "homepage": "https://latent-spaces.github.io/brag/",
-  "repository": "https://github.com/latent-spaces/brag",
+  "homepage": "https://github.com/rlongin/brag",
+  "repository": "https://github.com/rlongin/brag",
   "license": "MIT",
-  "keywords": ["video", "launch", "hyperframes", "skill"]
+  "keywords": [
+    "video",
+    "launch",
+    "hyperframes",
+    "efv-diorlet",
+    "skill"
+  ]
 }
